@@ -1,12 +1,6 @@
 
 version: 2
-sources:
-   - name: raw
-     schema: gz_raw_data
-     tables:
-       - name: sales
-       - name: product
-       - name: ship
+
 models:
     - name: my_first_dbt_model
       description: "A starter dbt model"
