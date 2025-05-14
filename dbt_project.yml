@@ -41,5 +41,4 @@ models:
     mart:
       +materialized: table
       finance:
-        +schema: finance_models  # Will create tables in finance_models dataset
-        +materialized: table
+        +schema: finance
