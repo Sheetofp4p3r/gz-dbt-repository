@@ -1,5 +1,6 @@
 version: 2
 
+
 sources:
   - name: raw
     schema: gz_raw_data
@@ -23,10 +24,10 @@ sources:
         identifier: raw_gz_product
         columns:
           - name: products_id
-            description: "id of product"
+            description: "Primary key"
             tests:
-              - unique:
-                 column_name: products_id
+              - unique
+              - not_null
           - name: purchase_price
             description: "price of purchase"
 
@@ -35,10 +36,10 @@ sources:
         description: "shipping information"
         columns:
           - name: orders_id
-            description: "id of order"
+            description: "Primary key"
             tests:
-              - unique:
-                 column_name: orders_id
+              - unique
+              - not_null
           - name: shipping_fee
             description: "fee of shipping by order"
           - name: logCost
