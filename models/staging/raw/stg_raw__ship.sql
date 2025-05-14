@@ -9,13 +9,12 @@ source as (
 renamed as (
 
     select
-    orders_id, 
-    shipping_fee,  
-    logCost, 
-    cast(ship_cost AS float)
+        orders_id, 
+        shipping_fee,  
+        logCost AS logcost,
+        CAST(ship_cost AS FLOAT64) AS ship_cost
 
     from source
-    where 
 )
 
 select * from renamed
