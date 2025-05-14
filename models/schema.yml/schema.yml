@@ -86,3 +86,19 @@ sources:
             tests:
              - unique
              - not_null
+        
+      - name: finance_campaigns_month
+        description: "Monthly aggregated view of marketing and financial metrics"
+        columns:
+            - name: ads_margin
+              description: "Monthly total of operational_margin - ads_cost"
+            - name: datemonth
+              description: "First day of each month"
+
+      - name: finance_campaigns_day
+        description: "Combined view of marketing campaigns and financial metrics"
+        columns:
+            - name: ads_margin
+              description: "Calculated as operational_margin - ads_cost"
+            - name: date
+              description: "Date of activity"
